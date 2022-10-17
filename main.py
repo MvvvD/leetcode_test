@@ -96,3 +96,11 @@ def strStr(haystack: str, needle: str) -> int:
     # https://leetcode.com/problems/implement-strstr/submissions/
     # Runtime: 28 ms, faster than 96.90% of Python3 online submissions for Implement strStr().
     # Memory Usage: 13.8 MB, less than 97.15% of Python3 online submissions for Implement strStr().
+
+
+def reverseBits(n: int) -> int:
+    return int(str(format(n, '032b'))[::-1], 2)
+
+    # https://leetcode.com/problems/reverse-bits/submissions/
+    # Runtime: 31 ms, faster than 96.60% of Python3 online submissions for Reverse Bits.
+    # Memory Usage: 13.8 MB, less than 94.29% of Python3 online submissions for Reverse Bits.
