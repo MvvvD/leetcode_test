@@ -99,8 +99,26 @@ def strStr(haystack: str, needle: str) -> int:
 
 
 def reverseBits(n: int) -> int:
-    return int(str(format(n, '032b'))[::-1], 2)
+    return int(format(n, '032b')[::-1], 2)
 
     # https://leetcode.com/problems/reverse-bits/submissions/
     # Runtime: 31 ms, faster than 96.60% of Python3 online submissions for Reverse Bits.
     # Memory Usage: 13.8 MB, less than 94.29% of Python3 online submissions for Reverse Bits.
+
+
+def searchInsert(nums: List[int], target: int) -> int:
+    if target not in nums:
+        nums.append(target)
+        nums.sort()
+    return nums.index(target)
+
+    # https://leetcode.com/problems/search-insert-position/submissions/
+    #Runtime 46 ms Beats 92.24% Memory 14.7 MB Beats 31.40%
+
+def removeElement(self, nums: List[int], val: int) -> int:
+    while val in nums:
+        nums.remove(val)
+    return len(nums)
+    
+    # https://leetcode.com/problems/remove-element/submissions/
+    # Runtime 24 ms Beats 98.78% Memory 13.8 MB Beats 95.98%
